@@ -8,3 +8,22 @@ body {
     font-family: Arial;
     color: white;
 }
+
+.player-wrapper {
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    grid-gap: 12px;
+}
+
+.player-button {
+    height: 120px;
+    border: 2px solid green;
+    background: transparent;
+    border-radius: 50%;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+}
