@@ -13,6 +13,11 @@ const playersScores = document.querySelector(".players-scores");
 const resetButton = document.querySelector(".reset-score-button");
 const autoPlay = document.querySelector(".auto-play-button");
 
+Array.from(document.querySelectorAll('.player-button'))
+    .forEach(playButton => {
+    })
+
+
 playersScores.innerHTML = `Wins: ${scores.wins}, Loses: ${scores.loses}, Ties: ${scores.ties}`;
 
 function playGround(player) {
