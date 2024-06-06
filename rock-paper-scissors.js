@@ -51,7 +51,11 @@ function playGround(player) {
         ties += 1;
     }
     playersResult.innerHTML = result;
-    playersOut.innerHTML = `You <img src='images/${player}Img.jfif' alt='${player}'/>  <img src='images/${computerplay}Img.jfif' alt='${computerplay}'/>`
+    playersOut.innerHTML = `You 
+    <img src='images/${player}Img.jfif' alt='${player}'/>  
+    <img src='images/${computerplay}Img.jfif' alt='${computerplay}'/> 
+    Computer`
+
     playersScores.innerHTML = `Wins: ${wins}, Loses: ${loses}, Ties: ${ties}`;
 }
 
