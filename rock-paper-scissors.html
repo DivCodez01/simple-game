@@ -14,7 +14,9 @@
         <button onclick='playGround("paper")'>Paper</button>
         <button onclick='playGround("scissors")'>Scissors</button>
     </div>
-    <p></p>
+    <p class="result"></p>
+    <p class="winlosePlayer"></p>
+    <p class="score"></p>
     <button>Reset Score</button>
     <button>Auto Play</button>
 
@@ -22,6 +24,11 @@
         function playGround(player) {
             const computerplay = computerPlayer();
             let result = '';
+            let score = {
+                wins: 0,
+                loses: 0,
+                ties: 0
+            };
 
             if (player == 'rock') {
                 if (computerplay == 'rock') {
@@ -48,7 +55,7 @@
                     result = 'Tie.'
                 }
             }
-            console.log(result);
+            console.log(`Wins: ${wins}, Loses: ${loses}, Ties: ${ties}`);
         }
 
         function computerPlayer() {
