@@ -21,16 +21,20 @@
     <button>Auto Play</button>
 
     <script>
+        let scores = {
+            wins: 0,
+            loses: 0,
+            ties: 0
+        };
+
+        let { wins, loses, ties } = scores;
+
         function playGround(player) {
             const computerplay = computerPlayer();
             let result = '';
-            let score = {
-                wins: 0,
-                loses: 0,
-                ties: 0
-            };
 
             if (player == 'rock') {
+
                 if (computerplay == 'rock') {
                     result = 'Tie.'
                 } else if (computerplay == 'paper') {
@@ -54,6 +58,10 @@
                 } else if (computerplay == 'scissors') {
                     result = 'Tie.'
                 }
+            }
+
+            if (result == 'You win.') {
+                wins += 1;
             }
             console.log(`Wins: ${wins}, Loses: ${loses}, Ties: ${ties}`);
         }
