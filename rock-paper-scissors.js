@@ -4,7 +4,9 @@ let scores = {
     ties: 0
 };
 
-const result = document.querySelector(".result");
+const playersResult = document.querySelector(".players-result");
+const playersOut = document.querySelector(".out-players");
+const playersScores = document.querySelector(".players-scores");
 
 let { wins, loses, ties } = scores;
 
