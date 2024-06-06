@@ -11,6 +11,7 @@ const playersResult = document.querySelector(".players-result");
 const playersOut = document.querySelector(".out-players");
 const playersScores = document.querySelector(".players-scores");
 const resetButton = document.querySelector(".reset-score-button");
+const autoPlay = document.querySelector(".auto-play-button");
 
 playersScores.innerHTML = `Wins: ${scores.wins}, Loses: ${scores.loses}, Ties: ${scores.ties}`;
 
@@ -83,4 +84,9 @@ resetButton.addEventListener("click", function (ev) {
     scores.loses = 0;
     scores.ties = 0;
     playersScores.innerHTML = `Wins: ${scores.wins}, Loses: ${scores.loses}, Ties: ${scores.ties}`;
+})
+
+autoPlay.addEventListener("click", function (ev) {
+    const playerRandom = Math.floor(Math.random() * 3) + 1;
+    playGround(player)
 })
