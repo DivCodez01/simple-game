@@ -51,7 +51,11 @@
         }
 
         function computerPlayer() {
+            let gameRandom = Math.random();
 
+            if (gameRandom >= 0 && gameRandom <= 1 / 3) {
+                return 'rock';
+            }
         }
     </script>
 </body>
