@@ -13,6 +13,13 @@ const playersScores = document.querySelector(".players-scores");
 const resetButton = document.querySelector(".reset-score-button");
 const autoPlay = document.querySelector(".auto-play-button");
 
+// it doen't work
+// Array.from(document.querySelectorAll('.player-button'))
+//     .forEach(playButton => {
+//         let playerName = playButton.firstElementChild.getAttribute("alt");
+//         playButton.addEventListener("click", playGround(playerName))
+//     })
+
 Array.from(document.querySelectorAll('.player-button'))
     .forEach(playButton => {
         let playerName = playButton.firstElementChild.getAttribute("alt");
@@ -99,6 +106,7 @@ resetButton.addEventListener("click", function (ev) {
 let isAutoPlay = false;
 let autoPlayTime;
 
+// declared setTimeout or setInterval outside the function
 autoPlay.addEventListener("click", function (ev) {
     // autoPlay.classList.toggle('computerPlay');
 
