@@ -87,6 +87,6 @@ resetButton.addEventListener("click", function (ev) {
 })
 
 autoPlay.addEventListener("click", function (ev) {
-    const playerRandom = Math.floor(Math.random() * 3) + 1;
+    const manPlayerRandom = Math.floor(Math.random() * 3) + 1;
     playGround(player)
 })
