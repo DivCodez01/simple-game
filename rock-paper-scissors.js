@@ -15,6 +15,11 @@ const autoPlay = document.querySelector(".auto-play-button");
 
 Array.from(document.querySelectorAll('.player-button'))
     .forEach(playButton => {
+        let playerName = playButton.firstElementChild.getAttribute("alt");
+        playButton.addEventListener("click", (ev) => {
+            playGround(playerName)
+            console.log(playerName)
+        })
     })
 
 
