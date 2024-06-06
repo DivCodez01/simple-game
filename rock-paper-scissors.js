@@ -86,13 +86,27 @@ resetButton.addEventListener("click", function (ev) {
     playersScores.innerHTML = `Wins: ${scores.wins}, Loses: ${scores.loses}, Ties: ${scores.ties}`;
 })
 
-autoPlay.addEventListener("click", function (ev) {
-    autoPlay.classList.toggle('computerPlay');
+let isAutoPlay = false;
+let autoPlayTime;
 
-    if (autoPlay.classList.contains("computerPlay")) {
-        console.log("koko")
+autoPlay.addEventListener("click", function (ev) {
+    // autoPlay.classList.toggle('computerPlay');
+
+    // if (autoPlay.classList.contains("computerPlay")) {
+    //     autoPlayTime = setInterval(() => {
+    //         autoPlayAI();
+    //     }, 1200);
+    // } else {
+    //     clearInterval(autoPlayTime);
+    //     autoPlayAI();
+    // }
+
+    if (!isAutoPlay) {
+        autoPlayTime = setInterval(autoPlayAI, 1200);
+        isAutoPlay = true;
     } else {
-        console.log("jojo")
+        clearInterval(autoPlayTime);
+        isAutoPlay = false;
     }
 })
 
