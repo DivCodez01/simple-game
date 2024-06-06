@@ -1,21 +1,17 @@
 document.title = "ROCK-PAPER-SCISSORS GAME"
 
-let scores = {
+let scores = JSON.parse(localStorage.getItem("scores")) || {
     wins: 0,
     loses: 0,
     ties: 0
 };
-
-let localSto = JSON.parse(localStorage.getItem("scores"));
-console.log(localSto);
-
-
+console.log(scores);
 
 const playersResult = document.querySelector(".players-result");
 const playersOut = document.querySelector(".out-players");
 const playersScores = document.querySelector(".players-scores");
+const resetButton = document.querySelector(".reset-score-button");
 
-scores = localSto;
 playersScores.innerHTML = `Wins: ${scores.wins}, Loses: ${scores.loses}, Ties: ${scores.ties}`;
 
 function playGround(player) {
@@ -80,3 +76,11 @@ function computerPlayer() {
         return 'scissors';
     }
 }
+
+resetButton.addEventListener("click", function (ev) {
+    localStorage.clear();
+    scores.wins = 0;
+    scores.loses = 0;
+    scores.ties = 0;
+    playersScores.innerHTML = `Wins: ${scores.wins}, Loses: ${scores.loses}, Ties: ${scores.ties}`;
+})
