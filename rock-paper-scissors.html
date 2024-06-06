@@ -23,12 +23,22 @@
             const computerplay = computerPlayer();
             let result = '';
 
-            if (player == 'rock' && computerplay == 'rock') {
-                result = 'Tie';
-            } else if (player == 'rock' && computerplay == 'paper') {
-                result = 'You lose.'
-            } else if (player == 'rock' && computerplay == 'scissors') {
-                result = 'You win.'
+            if (player == 'rock') {
+                if (computerplay == 'rock') {
+                    result = 'Tie.'
+                } else if (computerplay == 'paper') {
+                    result = 'You lose.'
+                } else if (computerplay == 'scissors') {
+                    result = 'You win.'
+                }
+            } else if (player == 'paper') {
+                if (computerplay == 'rock') {
+                    result = 'You win.'
+                } else if (computerplay == 'paper') {
+                    result = 'Tie.'
+                } else if (computerplay == 'scissors') {
+                    result = 'You lose.'
+                }
             }
         }
 
