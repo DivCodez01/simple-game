@@ -47,14 +47,19 @@
                 } else if (computerplay == 'scissors') {
                     result = 'Tie.'
                 }
+                console.log(result);
             }
         }
 
         function computerPlayer() {
             let gameRandom = Math.random();
 
-            if (gameRandom >= 0 && gameRandom <= 1 / 3) {
+            if (gameRandom >= 0 && gameRandom < 1 / 3) {
                 return 'rock';
+            } else if (gameRandom >= 1 / 3 && gameRandom < 2 / 3) {
+                return 'paper';
+            } else if (gameRandom >= 2 / 3 && gameRandom <= 1) {
+                return 'scissors';
             }
         }
     </script>
