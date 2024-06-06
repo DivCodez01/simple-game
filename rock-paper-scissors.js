@@ -48,7 +48,9 @@ function playGround(player) {
     } else {
         ties += 1;
     }
-    console.log(`Wins: ${wins}, Loses: ${loses}, Ties: ${ties}`);
+    playersResult.innerHTML = result;
+    playersOut.innerHTML = `You ${player} and computer ${computerplay}`
+    playersScores.innerHTML = `Wins: ${wins}, Loses: ${loses}, Ties: ${ties}`;
 }
 
 function computerPlayer() {
