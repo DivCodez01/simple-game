@@ -62,6 +62,10 @@
 
             if (result == 'You win.') {
                 wins += 1;
+            } else if (result == "You lose.") {
+                loses += 1;
+            } else {
+                ties += 1;
             }
             console.log(`Wins: ${wins}, Loses: ${loses}, Ties: ${ties}`);
         }
