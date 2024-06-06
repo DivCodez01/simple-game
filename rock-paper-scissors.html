@@ -10,9 +10,9 @@
 <body>
     <h1>Rock Paper scissors</h1>
     <div>
-        <button onclick='playGround()'>Rock</button>
-        <button onclick='playGround()'>Paper</button>
-        <button onclick='playGround()'>Scissors</button>
+        <button onclick='playGround("rock")'>Rock</button>
+        <button onclick='playGround("paper")'>Paper</button>
+        <button onclick='playGround("scissors")'>Scissors</button>
     </div>
     <p></p>
     <button>Reset Score</button>
@@ -47,8 +47,8 @@
                 } else if (computerplay == 'scissors') {
                     result = 'Tie.'
                 }
-                console.log(result);
             }
+            console.log(result);
         }
 
         function computerPlayer() {
