@@ -6,11 +6,17 @@ let scores = {
     ties: 0
 };
 
+let localSto = JSON.parse(localStorage.getItem("scores"));
+console.log(localSto);
+
+
+
 const playersResult = document.querySelector(".players-result");
 const playersOut = document.querySelector(".out-players");
 const playersScores = document.querySelector(".players-scores");
 
-let { wins, loses, ties } = scores;
+scores = localSto;
+playersScores.innerHTML = `Wins: ${scores.wins}, Loses: ${scores.loses}, Ties: ${scores.ties}`;
 
 function playGround(player) {
     const computerplay = computerPlayer();
@@ -44,19 +50,23 @@ function playGround(player) {
     }
 
     if (result == 'You win.') {
-        wins += 1;
+        scores.wins += 1;
     } else if (result == "You lose.") {
-        loses += 1;
+        scores.loses += 1;
     } else {
-        ties += 1;
+        scores.ties += 1;
     }
+
     playersResult.innerHTML = result;
     playersOut.innerHTML = `You 
     <img src='images/${player}Img.jfif' alt='${player}'/>  
     <img src='images/${computerplay}Img.jfif' alt='${computerplay}'/> 
     Computer`
 
-    playersScores.innerHTML = `Wins: ${wins}, Loses: ${loses}, Ties: ${ties}`;
+    playersScores.innerHTML = `Wins: ${scores.wins}, Loses: ${scores.loses}, Ties: ${scores.ties}`;
+
+    localStorage.setItem("scores", JSON.stringify(scores));
+    console.log(`Wins: ${scores.wins}, Loses: ${scores.loses}, Ties: ${scores.ties}`)
 }
 
 function computerPlayer() {
