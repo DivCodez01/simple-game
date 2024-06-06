@@ -87,6 +87,24 @@ resetButton.addEventListener("click", function (ev) {
 })
 
 autoPlay.addEventListener("click", function (ev) {
-    const manPlayerRandom = Math.floor(Math.random() * 3) + 1;
-    playGround(player)
+    autoPlay.classList.toggle('computerPlay');
+
+    if (autoPlay.classList.contains("computerPlay")) {
+        console.log("koko")
+    } else {
+        console.log("jojo")
+    }
 })
+
+function autoPlayAI() {
+    const playerRandom = Math.floor(Math.random() * 3) + 1;
+
+    if (playerRandom == 1) {
+        player = 'rock';
+    } else if (playerRandom == 2) {
+        player = 'paper';
+    } else {
+        player = 'scissors';
+    }
+    playGround(player)
+}
