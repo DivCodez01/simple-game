@@ -1,3 +1,5 @@
+document.title = "ROCK-PAPER-SCISSORS GAME"
+
 let scores = {
     wins: 0,
     loses: 0,
