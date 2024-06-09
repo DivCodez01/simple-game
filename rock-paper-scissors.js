@@ -139,6 +139,12 @@ function loadGame() {
         }
         playGround(player)
     }
+
+    document.body.addEventListener("keyup", (ev) => {
+        if (ev.key == 'r') {
+            playGround("rock");
+        }
+    })
 }
 
 /* window.onload = func() { funcLoad()}, document.addEventListener("DOMContentLoaded", funcLoad()) and window.addEventListener("load", funcLoad())
