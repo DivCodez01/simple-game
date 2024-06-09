@@ -143,6 +143,8 @@ function loadGame() {
     document.body.addEventListener("keyup", (ev) => {
         if (ev.key == 'r') {
             playGround("rock");
+        } else if (ev.key == 'p') {
+            playGround('paper');
         }
     })
 }
