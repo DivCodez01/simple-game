@@ -145,6 +145,8 @@ function loadGame() {
             playGround("rock");
         } else if (ev.key == 'p') {
             playGround('paper');
+        } else if (ev.key == 's') {
+            playGround('scissors');
         }
     })
 }
